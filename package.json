@@ -1,0 +1,14 @@
+{
+  "name": "bankistapp",
+  "version": "1.0.0",
+  "description": "bankist app with cool design",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass scss/Bankist__App(main).scss css/Bankist__App(main).css -w"
+  },
+  "author": "Dslayer33",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

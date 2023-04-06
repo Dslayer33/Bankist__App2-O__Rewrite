@@ -1,0 +1,312 @@
+.header {
+    width: 100vw;
+    height: 110rem;
+    overflow-x: hidden;
+   
+
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+
+          .header-main-img {
+              display: block;
+              position: absolute;
+              z-index: -1;
+              width: 100%;
+              height: 100%;  
+           }
+
+
+           .header-right-column {
+               width: 10rem;
+               height: 100%;
+               position: absolute;
+               right: 0;
+               background-color: $color-main1;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+               align-items: center;
+
+               
+               .header-burger-menu {
+                   display: flex;
+                   flex-direction: column;
+                   width: 3rem;
+                   height: 3rem;
+                   justify-content: space-between;
+                   margin-top: 2rem;
+                  
+
+                   .burger-line {
+                       background-color: $color-main2;
+                       width: 3rem;
+                       height: 0.2rem;
+                   }
+               }
+
+               .header-burger-menu.header-burger-menu {
+                  @include breakpoint2_ {
+                      margin-top: 0;
+                      margin-left: 2rem;
+                  }
+               }
+
+
+               .column-icon {
+                 width: 4rem;
+                 height: 4rem;
+                 margin-bottom: 2rem;
+               }
+
+               .column-icon.column-icon {
+                  @include breakpoint2_ {
+                    margin-bottom: 0;
+                    margin-right: 2rem;
+                  }
+               }
+           }
+
+           .header-right-column.header-right-column {
+               @include breakpoint2_ {
+                   width: 100%;
+                   height: 10rem;
+                   bottom: 0;
+                   flex-direction: row;
+                   justify-items: center;
+                   align-items: center;
+               }
+           }
+
+
+           .header-icon-left {
+               width: 5rem;
+               height: 5rem;
+               position: absolute;
+               left: 0;
+               top: 0;
+               margin-left: 3rem;
+               margin-top: 2rem;
+           }
+
+           .header-icon-left.header-icon-left {
+              @include breakpoint4_ {
+                  display: none;
+              }
+           }
+
+           
+
+
+
+           .main-header-block {
+               position: absolute;
+               left: 50%;
+               top: 0.5rem;
+               transform: translate(-50%,-0.5rem);
+               display: flex;
+               flex-direction: column;
+
+               .poster-block {
+                   position: relative;  
+                   width: 100%;
+               }
+
+            //    .poster-block.poster-block {
+            //        @include breakpoint6_ {
+            //           width: 100vw;
+            //        }
+            //    }
+
+               
+
+
+               .poster-icon {
+                   width: 60rem;
+                   height: 25rem;
+               }
+
+               .poster-icon.poster-icon.poster-icon.poster-icon.poster-icon.poster-icon.poster-icon.poster-icon {
+                   @include breakpoint10_ {
+                     transform: scale(0.5);
+                    }
+                } 
+
+               .poster-icon.poster-icon.poster-icon.poster-icon.poster-icon.poster-icon.poster-icon {
+                  @include breakpoint9_ {
+                    transform: scale(0.55);
+                 }
+               } 
+
+               .poster-icon.poster-icon.poster-icon.poster-icon.poster-icon.poster-icon {
+                   @include breakpoint8_ {
+                     transform: scale(0.6);
+                    }
+              } 
+
+               .poster-icon.poster-icon.poster-icon.poster-icon.poster-icon {
+                    @include breakpoint7_ {
+                      transform: scale(0.7);
+                    }
+            } 
+
+               .poster-icon.poster-icon.poster-icon.poster-icon {
+                  @include breakpoint6_ {
+                    transform: scale(0.8);
+                  }
+              } 
+
+               .poster-icon.poster-icon.poster-icon {
+                  @include breakpoint3_ {
+                     transform: scale(0.9);
+                   }
+               } 
+
+               .poster-icon.poster-icon {
+                  @include breakpoint1_ {
+                     width: 50rem;
+                     height: 20rem;
+                  }
+               }
+
+
+               .poster-title {
+                   font-family: $main-font;
+                   font-size: 5rem;
+                   font-weight: 700;
+                   color: $color-main2;
+                   text-transform: uppercase;
+                   position: absolute;
+                   left: 50%;
+                   top: 50%;
+                   transform: translate(-50%,-50%);
+               }
+
+               .poster-title.poster-title.poster-title.poster-title.poster-title {
+                   @include breakpoint8_ {
+                      font-size: 2rem;
+                   }
+              }
+
+               .poster-title.poster-title.poster-title.poster-title {
+                @include breakpoint6_ {
+                   font-size: 2.5rem;
+               }
+            }
+
+               .poster-title.poster-title.poster-title {
+                  @include breakpoint3_ {
+                  font-size: 3rem;
+                 }
+              }
+
+               .poster-title.poster-title {
+                  @include breakpoint1_ {
+                    font-size: 4rem;
+                  }
+               }
+
+
+               .form-collection {
+                   margin-top: 3rem;
+                   width: 55rem;
+                   height: 70rem;
+                   background-color: $color-main2;
+                   border-radius: 0.5rem;
+                   border: none;
+                   align-self: center;
+                   justify-self: center;
+                   display: flex;
+                   flex-direction: column;
+                   justify-items: center;
+                   align-items: center;
+                   justify-content: space-around;
+
+                   .forms-title {
+                       font-family: $main-font;
+                       font-weight: 700;
+                       font-size: 5rem;
+                       color: $color-main1;
+                       text-transform: uppercase;
+                   }
+
+
+                  
+
+
+                   .form-item {
+                       width: 80%;
+                       height: 6rem;
+                       background-color: $color-main3;
+                       color: $color-main2;
+                       border: none;
+                       border-radius: 1rem;
+                       font-family: $main-font;
+                       font-size: 4rem;
+                       text-align: center;
+
+                       &::-webkit-input-placeholder {
+                          color: $color-main2;
+                          text-align: center;
+                       }
+
+                       &:-moz-placeholder {
+                           color: $color-main2;
+                           text-align: center;
+                       }
+
+
+                       &::-moz-placeholder {
+                          color: $color-main2;
+                          text-align: center;
+                       }
+
+
+                       &:-ms-input-placeholder {
+                           color: $color-main2;
+                           text-align: center;
+                       }
+
+
+                       &::placeholder {
+                          color: $color-main2;
+                          text-align: center;
+                       }
+                    }
+
+
+                   .forms-btn {
+                       width: 70%;
+                       height: 6rem;
+                       background-color: $color-main1;
+                       border: none;
+                       border-radius: 1rem;
+
+                       .forms-btn-text {
+                          font-family: $main-font;
+                          font-size: 4rem;
+                          font-weight: 700;
+                          color: $color-main2;
+                          text-transform: uppercase;
+                       }
+                   }
+               }
+
+               .form-collection.form-collection.form-collection {
+                    @include breakpoint5_ {
+                       width: 100vw;
+                    }
+               }
+
+               .form-collection.form-collection {
+                   @include breakpoint1_ {
+                      width: 50rem;
+                   }
+               }
+           }
+
+    }
+}
