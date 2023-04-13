@@ -2,7 +2,6 @@
     width: 100vw;
     height: 110rem;
     overflow-x: hidden;
-   
 
 
     &__container {
@@ -56,10 +55,126 @@
                }
 
 
+               .nav-icon-5 {
+                 position: relative;
+                 cursor: pointer;
+               }
+
+              
+
+               .nav-icon-5  .line-nav{
+                   position: absolute;
+                   transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+                   transition-duration: 500ms;
+               }
+
+               .nav-icon-5  .line-nav:nth-child(1){
+                  top:0rem;
+                  left: 0rem;
+               }
+
+               .nav-icon-5  .line-nav:nth-child(2){
+                  top:1.3rem;
+                  left: 0rem;
+                  opacity:1;
+               }
+
+               .nav-icon-5 .line-nav:nth-child(3){
+                   bottom:0rem;
+                   left: 0rem;
+               }
+
+               .nav-icon-5:not(.open):hover  .line-nav:nth-child(1){
+                transform: rotate(-3deg) scaleY(1.1);
+               }
+
+               .nav-icon-5:not(.open):hover  .line-nav:nth-child(2){
+                transform: rotate(3deg) scaleY(1.1);
+               }
+
+               .nav-icon-5:not(.open):hover  .line-nav:nth-child(3){
+                transform: rotate(-4deg) scaleY(1.1);
+               }
+
+
+               .nav-icon-5.open  .line-nav:nth-child(1){
+                  transform: rotate(45deg);
+                  top: 1.3rem;
+              }
+
+              .nav-icon-5.open  .line-nav:nth-child(2){
+                  opacity:0;
+              }
+
+              .nav-icon-5.open  .line-nav:nth-child(3){
+                transform: rotate(-45deg);
+                top: 1.3rem;
+              }
+
+
+
+              .column-main-menu {
+                  display: none;
+                  flex-direction: column;
+                  text-align: center;
+                  height: 30rem;
+                  width: 35rem;
+                  justify-content: space-between;
+
+
+                  .menu-link-box {
+                      display: flex;
+                      transition: all .2s;
+                      align-self: center;
+                      justify-self: center;
+
+                      &:hover {
+                          padding: 2rem;
+                          border: 2px solid  $color-main2;
+                          border-radius: 10px;
+                      }
+
+                      .link-icon {
+                          width: 3rem;
+                          height: 3rem;
+                          display: none;
+                      }
+
+                      .icon--left {
+                          margin-right: 1rem;
+                      }
+
+                      .icon--right {
+                        margin-left: 1rem;
+                      }
+
+                      &:hover .link-icon{
+                          display: inline;
+                      }
+                  }
+                  
+
+                  .column-menu-link {
+                      font-family: $main-font;
+                      font-weight: 600;
+                      font-size: 3rem;
+                      color: $color-main2;
+                      text-decoration: none;
+                  }
+              }
+
+
+
                .column-icon {
                  width: 4rem;
                  height: 4rem;
                  margin-bottom: 2rem;
+                 transition: all .2s;
+
+                  &:hover {
+                     cursor: pointer;
+                     transform: scale(1.1);
+                  }
                }
 
                .column-icon.column-icon {
@@ -102,7 +217,7 @@
 
 
 
-           .main-header-block {
+           .main-header-block {  
                position: absolute;
                left: 50%;
                top: 0.5rem;
@@ -307,6 +422,33 @@
                    }
                }
            }
+
+           
+           .main-warning {
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translate(-50%,-2rem);
+              visibility: hidden;
+              opacity: 0;
+
+               font-family: $main-font;
+               font-size: 2rem;
+               font-weight: 500;
+               text-align: center;
+               color: $color-main2;
+
+
+               .warning--decorate {
+                   text-decoration: underline;
+                   color: inherit;
+
+                   &:hover {
+                       cursor: pointer;
+                   }
+               }
+           }
+
 
     }
 }

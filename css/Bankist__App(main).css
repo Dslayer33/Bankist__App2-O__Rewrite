@@ -37,10 +37,77 @@
         .header__container .header-right-column .header-burger-menu.header-burger-menu {
           margin-top: 0;
           margin-left: 2rem; } }
+      .header__container .header-right-column .nav-icon-5 {
+        position: relative;
+        cursor: pointer; }
+      .header__container .header-right-column .nav-icon-5 .line-nav {
+        position: absolute;
+        transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+        transition-duration: 500ms; }
+      .header__container .header-right-column .nav-icon-5 .line-nav:nth-child(1) {
+        top: 0rem;
+        left: 0rem; }
+      .header__container .header-right-column .nav-icon-5 .line-nav:nth-child(2) {
+        top: 1.3rem;
+        left: 0rem;
+        opacity: 1; }
+      .header__container .header-right-column .nav-icon-5 .line-nav:nth-child(3) {
+        bottom: 0rem;
+        left: 0rem; }
+      .header__container .header-right-column .nav-icon-5:not(.open):hover .line-nav:nth-child(1) {
+        transform: rotate(-3deg) scaleY(1.1); }
+      .header__container .header-right-column .nav-icon-5:not(.open):hover .line-nav:nth-child(2) {
+        transform: rotate(3deg) scaleY(1.1); }
+      .header__container .header-right-column .nav-icon-5:not(.open):hover .line-nav:nth-child(3) {
+        transform: rotate(-4deg) scaleY(1.1); }
+      .header__container .header-right-column .nav-icon-5.open .line-nav:nth-child(1) {
+        transform: rotate(45deg);
+        top: 1.3rem; }
+      .header__container .header-right-column .nav-icon-5.open .line-nav:nth-child(2) {
+        opacity: 0; }
+      .header__container .header-right-column .nav-icon-5.open .line-nav:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 1.3rem; }
+      .header__container .header-right-column .column-main-menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        height: 30rem;
+        width: 35rem;
+        justify-content: space-between; }
+        .header__container .header-right-column .column-main-menu .menu-link-box {
+          display: flex;
+          transition: all .2s;
+          align-self: center;
+          justify-self: center; }
+          .header__container .header-right-column .column-main-menu .menu-link-box:hover {
+            padding: 2rem;
+            border: 2px solid #F7FFF7;
+            border-radius: 10px; }
+          .header__container .header-right-column .column-main-menu .menu-link-box .link-icon {
+            width: 3rem;
+            height: 3rem;
+            display: none; }
+          .header__container .header-right-column .column-main-menu .menu-link-box .icon--left {
+            margin-right: 1rem; }
+          .header__container .header-right-column .column-main-menu .menu-link-box .icon--right {
+            margin-left: 1rem; }
+          .header__container .header-right-column .column-main-menu .menu-link-box:hover .link-icon {
+            display: inline; }
+        .header__container .header-right-column .column-main-menu .column-menu-link {
+          font-family: sans-serif;
+          font-weight: 600;
+          font-size: 3rem;
+          color: #F7FFF7;
+          text-decoration: none; }
       .header__container .header-right-column .column-icon {
         width: 4rem;
         height: 4rem;
-        margin-bottom: 2rem; }
+        margin-bottom: 2rem;
+        transition: all .2s; }
+        .header__container .header-right-column .column-icon:hover {
+          cursor: pointer;
+          transform: scale(1.1); }
       @media screen and (max-width: 800px) {
         .header__container .header-right-column .column-icon.column-icon {
           margin-bottom: 0;
@@ -184,6 +251,29 @@
       @media screen and (max-width: 850px) {
         .header__container .main-header-block .form-collection.form-collection {
           width: 50rem; } }
+    .header__container .main-warning {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -2rem);
+      visibility: hidden;
+      opacity: 0;
+      font-family: sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+      text-align: center;
+      color: #F7FFF7; }
+      .header__container .main-warning .warning--decorate {
+        text-decoration: underline;
+        color: inherit; }
+        .header__container .main-warning .warning--decorate:hover {
+          cursor: pointer; }
+
+@keyframes speen {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 html {
   font-size: 62.5%;
