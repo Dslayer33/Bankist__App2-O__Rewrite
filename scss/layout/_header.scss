@@ -49,6 +49,32 @@
 
                .header-burger-menu.header-burger-menu {
                   @include breakpoint2_ {
+                      display: none;
+                      margin-top: 0;
+                      margin-left: 2rem;
+                  }
+               }
+
+
+               .burger-menu--shadow {
+                 display: none;
+                 flex-direction: column;
+                 width: 3rem;
+                 height: 3rem;
+                 justify-content: space-between;
+                 margin-top: 2rem;
+
+                 .burger-line--shadow {
+                    background-color: $color-main2;
+                    width: 3rem;
+                    height: 0.2rem;
+                 }
+
+               }
+
+               .burger-menu--shadow.burger-menu--shadow {
+                   @include breakpoint2_ {
+                      display: flex;
                       margin-top: 0;
                       margin-left: 2rem;
                   }
@@ -113,6 +139,64 @@
 
 
 
+
+               .nav-icon--shadow {
+                 position: relative;
+                 cursor: pointer;
+               }
+
+              
+
+               .nav-icon--shadow  .line-nav--shadow{
+                   position: absolute;
+                   transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+                   transition-duration: 500ms;
+               }
+
+               .nav-icon--shadow  .line-nav--shadow:nth-child(1){
+                  top:0rem;
+                  left: 0rem;
+               }
+
+               .nav-icon--shadow  .line-nav--shadow:nth-child(2){
+                  top:1.3rem;
+                  left: 0rem;
+                  opacity:1;
+               }
+
+               .nav-icon--shadow .line-nav--shadow:nth-child(3){
+                   bottom:0rem;
+                   left: 0rem;
+               }
+
+               .nav-icon--shadow:not(.open):hover  .line-nav--shadow:nth-child(1){
+                transform: rotate(-3deg) scaleY(1.1);
+               }
+
+               .nav-icon--shadow:not(.open):hover  .line-nav--shadow:nth-child(2){
+                transform: rotate(3deg) scaleY(1.1);
+               }
+
+               .nav-icon--shadow:not(.open):hover  .line-nav--shadow:nth-child(3){
+                transform: rotate(-4deg) scaleY(1.1);
+               }
+
+
+               .nav-icon--shadow.open  .line-nav--shadow:nth-child(1){
+                  transform: rotate(45deg);
+                  top: 1.3rem;
+              }
+
+              .nav-icon--shadow.open  .line-nav--shadow:nth-child(2){
+                  opacity:0;
+              }
+
+              .nav-icon--shadow.open  .line-nav--shadow:nth-child(3){
+                transform: rotate(-45deg);
+                top: 1.3rem;
+              }
+
+
               .column-main-menu {
                   display: none;
                   flex-direction: column;
@@ -160,6 +244,21 @@
                       font-size: 3rem;
                       color: $color-main2;
                       text-decoration: none;
+                      align-self: center;
+                      justify-self: center;
+                  }
+
+                  .column-menu-link.column-menu-link {
+                     @include breakpoint6_ {
+                        font-size: 2rem;
+                     }
+                  }
+
+
+                  .column-menu-link.column-menu-link.column-menu-link {
+                      @include breakpoint8_ {
+                         font-size: 1.5rem;
+                      }
                   }
               }
 
@@ -179,10 +278,34 @@
 
                .column-icon.column-icon {
                   @include breakpoint2_ {
-                    margin-bottom: 0;
-                    margin-right: 2rem;
+                     display: none;
                   }
                }
+
+
+               .column-icon--shadow {
+                 display: none;
+                 width: 4rem;
+                 height: 4rem;
+                 margin-bottom: 2rem;
+                 transition: all .2s;
+
+                 &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                 }
+               }
+
+               .column-icon--shadow.column-icon--shadow {
+                 @include breakpoint2_ {
+                    display: inline;
+                    margin-bottom: 0;
+                    margin-right: 2rem;
+                 }
+             }
+
+
+
            }
 
            .header-right-column.header-right-column {
@@ -447,6 +570,54 @@
                        cursor: pointer;
                    }
                }
+           }
+
+
+           .main-warning--window {
+             display: none;
+             width: 100%;
+             height: 10rem;
+             position: absolute;
+             bottom: 0;
+             background-color: $color-main2;
+             justify-content: space-between;
+             border: 2px solid $color-main1;
+
+             .warn-text--shadow {
+                font-family: $main-font;
+                font-size: 2rem;
+                font-weight: 500;
+                text-align: center;
+                color: $color-main1;
+                align-self: center;
+                justify-self: center;
+
+                .warning--decorate1 {
+                    text-decoration: underline;
+                    color: inherit;
+ 
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+             }
+
+             .warn-text--shadow.warn-text--shadow {
+                @include breakpoint7_ {
+                    font-size: 1.7rem;
+                 }
+             }
+
+
+             .warn-close {
+                 font-size: 3rem;
+                 color: $color-main1;
+                 text-decoration: none;
+                 right: 0;
+                 top: 0;
+                 margin-top: 1rem;
+                 margin-right: 1rem;
+             }
            }
 
 
