@@ -1,6 +1,8 @@
 "use strict";
+// import {header,newHeader,newHeaderContainer,newHeaderContent,
+//   contentBlock1,contentBlock2,promisesVault,loadCont} from "./newHeaderModule";
 
-
+   import {asyncVault}  from "./newHeaderModule";
 
 const icon5 = document.querySelector('.nav-icon-5'); 
 let burgerMenuShadow = document.querySelector('.nav-icon--shadow');
@@ -11,6 +13,10 @@ let mainWarning = document.querySelector('.main-warning');
 let windowWarning = document.querySelector('.main-warning--window');
 let columnIcon2 = document.querySelector('.column-icon--shadow');
 let warningClose = document.querySelector('.warn-close');
+let formsBtn = document.querySelector('.forms-btn');
+let body = document.querySelector('.body');
+
+
 let columnWandH = 100;
 let warnOpacity = 1;
 
@@ -151,3 +157,34 @@ let warnOpacity = 1;
     mainColumn.style.display = "flex";
     windowWarning.style.display = "none";
   });
+
+ formsBtn.addEventListener('click',function(event4){
+     event4.preventDefault();
+     event4.stopPropagation();
+
+     
+      asyncVault.forEach(function(items){
+        return items();
+      });
+     
+
+    
+      // header.style.display = "none";
+      // body.after(newHeader);
+      // newHeader.classList.add('new-header');
+
+      // newHeader.appendChild(newHeaderContainer);
+      // newHeaderContainer.classList.add('new-header__container');
+
+      // newHeaderContainer.appendChild(newHeaderContent);
+      // newHeaderContent.classList.add('nh-content-block');
+
+      // newHeaderContent.appendChild(contentBlock1);
+      // newHeaderContent.appendChild(contentBlock2);
+      // contentBlock1.classList.add('content-in-block');
+      // contentBlock2.classList.add('content-in-block');
+  });
+ 
+
+  
+  
