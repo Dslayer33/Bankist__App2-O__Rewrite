@@ -11,6 +11,12 @@ html {
     box-sizing: border-box;
 }
 
+.html.html {
+    @include breakpoint9_ {
+        font-size: 58%;
+    }
+}
+
 
 
 

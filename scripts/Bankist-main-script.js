@@ -14,11 +14,24 @@ let windowWarning = document.querySelector('.main-warning--window');
 let columnIcon2 = document.querySelector('.column-icon--shadow');
 let warningClose = document.querySelector('.warn-close');
 let formsBtn = document.querySelector('.forms-btn');
-let body = document.querySelector('.body');
+let formUser = document.querySelector('.form--user');
+let formPIN = document.querySelector('.form--pin');
 
 
 let columnWandH = 100;
 let warnOpacity = 1;
+
+class dataUser {
+  // #user;
+  // #pin;
+ constructor(user,pin) {
+    this._user = user;
+    this._pin = pin;
+ }
+}
+
+let userExample = new dataUser("User",'0000');
+
 
 
   icon5.addEventListener('click', (event) => {
@@ -162,10 +175,18 @@ let warnOpacity = 1;
      event4.preventDefault();
      event4.stopPropagation();
 
+     let formUserData = formUser.value;
+     let formPINData = formPIN.value;
+
+     if(formUserData == userExample._user && formPINData == +userExample._pin){
+        asyncVault.forEach(function(items){
+          return items();
+        });
+     } else {
+        alert('Something wrong!');
+     }
+
      
-      asyncVault.forEach(function(items){
-        return items();
-      });
      
 
     

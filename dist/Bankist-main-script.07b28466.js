@@ -149,14 +149,77 @@ var contentBlock1Panel3 = document.createElement('div');
 var contentBlock1Panel4 = document.createElement('div');
 var contentBlock1Panel5 = document.createElement('div');
 var contentBlock1Panel6 = document.createElement('div');
+var contentBlock1PanelStatus1 = document.createElement('p');
+var contentBlock1PanelStatus2 = document.createElement('p');
+var contentBlock1PanelStatus3 = document.createElement('p');
+var contentBlock1PanelStatus4 = document.createElement('p');
+var contentBlock1PanelStatus5 = document.createElement('p');
+var contentBlock1PanelStatus6 = document.createElement('p');
+var contentBlock1PanelData1 = document.createElement('p');
+var contentBlock1PanelData2 = document.createElement('p');
+var contentBlock1PanelData3 = document.createElement('p');
+var contentBlock1PanelData4 = document.createElement('p');
+var contentBlock1PanelData5 = document.createElement('p');
+var contentBlock1PanelData6 = document.createElement('p');
+var contentBlock1PanelValue1 = document.createElement('p');
+var contentBlock1PanelValue2 = document.createElement('p');
+var contentBlock1PanelValue3 = document.createElement('p');
+var contentBlock1PanelValue4 = document.createElement('p');
+var contentBlock1PanelValue5 = document.createElement('p');
+var contentBlock1PanelValue6 = document.createElement('p');
 var contentBlock2Sum = document.createElement('h2');
 var contentBlock2FormsContainer = document.createElement('div');
 var contentBlock2FormBlock1 = document.createElement('div');
 var contentBlock2FormBlock2 = document.createElement('div');
+var formsContent1 = document.createElement('div');
+var formsContent2 = document.createElement('div');
+var formBlockTitle1 = document.createElement('h2');
+var formBlockTitle2 = document.createElement('h2');
+var butArr = document.createElement('span');
+var butArr2 = document.createElement('span');
+var butArr3 = document.createElement('span');
+var flexBox1 = document.createElement('div');
+var flexBox2 = document.createElement('div');
+var flexBox3 = document.createElement('div');
+var flexBox4 = document.createElement('div');
+var flexBoxVault1 = [flexBox1, flexBox2];
+var flexBoxVault2 = [flexBox3, flexBox4];
+var formBox1 = document.createElement('div');
+var formBox2 = document.createElement('div');
+var formBox3 = document.createElement('div');
+var formBox4 = document.createElement('div');
+var formBox5 = document.createElement('div');
+var formBoxVault1 = [formBox1, formBox2];
+var formBoxVault2 = [formBox3, formBox4, formBox5];
+var formTransfer = document.createElement('input');
+var formAmount = document.createElement('input');
+var formRequest = document.createElement('input');
+var formConfirmUser = document.createElement('input');
+var formConfirmPIN = document.createElement('input');
+var transferLabel = document.createElement('label');
+var amountLabel = document.createElement('label');
+var requestLabel = document.createElement('label');
+var userLabel = document.createElement('label');
+var pinLabel = document.createElement('label');
+var transferBtn = document.createElement('button');
+var amountBtn = document.createElement('button');
+var requestBtn = document.createElement('button');
+var userBtn = document.createElement('button');
+var closeBtn = document.createElement('button');
+var user1Info = {
+  UserName: "User",
+  UserPIN: "0000"
+};
 var contentBlock2CurrBtn = document.createElement('button');
 var formCollection = [contentBlock2FormBlock1, contentBlock2FormBlock2];
-var contentBlock2StartBalance = 0;
+var formContentCollection = [formsContent1, formsContent2];
+var titleCollection = [formBlockTitle1, formBlockTitle2];
+var contentBlock2StartBalance = 5000;
 var panelVault = [contentBlock1Panel1, contentBlock1Panel2, contentBlock1Panel3, contentBlock1Panel4, contentBlock1Panel5, contentBlock1Panel6];
+var statusClassVault1 = [contentBlock1PanelStatus1, contentBlock1PanelStatus2, contentBlock1PanelStatus4, contentBlock1PanelStatus5];
+var statusClassVault2 = [contentBlock1PanelStatus3, contentBlock1PanelStatus6];
+var dataVault = [contentBlock1PanelData1, contentBlock1PanelData2, contentBlock1PanelData3, contentBlock1PanelData4, contentBlock1PanelData5, contentBlock1PanelData6];
+var summVault = [contentBlock1PanelValue1, contentBlock1PanelValue2, contentBlock1PanelValue3, contentBlock1PanelValue4, contentBlock1PanelValue5, contentBlock1PanelValue6];
 var newTimeHours = new Date().getHours();
 var newTimeSeconds = new Date().getMinutes();
 
@@ -359,17 +422,163 @@ function () {
 
         case 24:
           _context5.next = 26;
-          return contentBlock1.appendChild(contentBlock1LogTime);
+          return contentBlock1Panel1.appendChild(contentBlock1PanelStatus1);
 
         case 26:
           _context5.next = 28;
-          return contentBlock1LogTime.classList.add('content-time');
+          return contentBlock1Panel2.appendChild(contentBlock1PanelStatus2);
 
         case 28:
           _context5.next = 30;
-          return contentBlock1LogTime.textContent = "You will be logged in ".concat(newTimeHours, ":").concat(newTimeSeconds);
+          return contentBlock1Panel3.appendChild(contentBlock1PanelStatus3);
 
         case 30:
+          _context5.next = 32;
+          return contentBlock1Panel4.appendChild(contentBlock1PanelStatus4);
+
+        case 32:
+          _context5.next = 34;
+          return contentBlock1Panel5.appendChild(contentBlock1PanelStatus5);
+
+        case 34:
+          _context5.next = 36;
+          return contentBlock1Panel6.appendChild(contentBlock1PanelStatus6);
+
+        case 36:
+          _context5.next = 38;
+          return statusClassVault1.forEach(function (items) {
+            items.classList.add('panel-item__status1');
+            items.textContent = "deposit";
+          });
+
+        case 38:
+          _context5.next = 40;
+          return statusClassVault2.forEach(function (items) {
+            items.classList.add('panel-item__status2');
+            items.textContent = "withdrawal";
+          });
+
+        case 40:
+          _context5.next = 42;
+          return contentBlock1Panel1.appendChild(contentBlock1PanelData1);
+
+        case 42:
+          _context5.next = 44;
+          return contentBlock1Panel2.appendChild(contentBlock1PanelData2);
+
+        case 44:
+          _context5.next = 46;
+          return contentBlock1Panel3.appendChild(contentBlock1PanelData3);
+
+        case 46:
+          _context5.next = 48;
+          return contentBlock1Panel4.appendChild(contentBlock1PanelData4);
+
+        case 48:
+          _context5.next = 50;
+          return contentBlock1Panel5.appendChild(contentBlock1PanelData5);
+
+        case 50:
+          _context5.next = 52;
+          return contentBlock1Panel6.appendChild(contentBlock1PanelData6);
+
+        case 52:
+          _context5.next = 54;
+          return dataVault.forEach(function (items) {
+            items.classList.add('panel-item__data');
+          });
+
+        case 54:
+          _context5.next = 56;
+          return contentBlock1PanelData1.textContent = "05/20/23";
+
+        case 56:
+          _context5.next = 58;
+          return contentBlock1PanelData2.textContent = "03/11/23";
+
+        case 58:
+          _context5.next = 60;
+          return contentBlock1PanelData3.textContent = "01/09/23";
+
+        case 60:
+          _context5.next = 62;
+          return contentBlock1PanelData4.textContent = "11/05/22";
+
+        case 62:
+          _context5.next = 64;
+          return contentBlock1PanelData5.textContent = "09/02/22";
+
+        case 64:
+          _context5.next = 66;
+          return contentBlock1PanelData6.textContent = "07/06/22";
+
+        case 66:
+          _context5.next = 68;
+          return contentBlock1Panel1.appendChild(contentBlock1PanelValue1);
+
+        case 68:
+          _context5.next = 70;
+          return contentBlock1Panel2.appendChild(contentBlock1PanelValue2);
+
+        case 70:
+          _context5.next = 72;
+          return contentBlock1Panel3.appendChild(contentBlock1PanelValue3);
+
+        case 72:
+          _context5.next = 74;
+          return contentBlock1Panel4.appendChild(contentBlock1PanelValue4);
+
+        case 74:
+          _context5.next = 76;
+          return contentBlock1Panel5.appendChild(contentBlock1PanelValue5);
+
+        case 76:
+          _context5.next = 78;
+          return contentBlock1Panel6.appendChild(contentBlock1PanelValue6);
+
+        case 78:
+          _context5.next = 80;
+          return summVault.forEach(function (items) {
+            items.classList.add('panel-item__summ');
+          });
+
+        case 80:
+          _context5.next = 82;
+          return contentBlock1PanelValue1.textContent = "1000$";
+
+        case 82:
+          _context5.next = 84;
+          return contentBlock1PanelValue2.textContent = "150$";
+
+        case 84:
+          _context5.next = 86;
+          return contentBlock1PanelValue3.textContent = "-500$";
+
+        case 86:
+          _context5.next = 88;
+          return contentBlock1PanelValue4.textContent = "320$";
+
+        case 88:
+          _context5.next = 90;
+          return contentBlock1PanelValue5.textContent = "270$";
+
+        case 90:
+          _context5.next = 92;
+          return contentBlock1PanelValue6.textContent = "-380$";
+
+        case 92:
+          _context5.next = 94;
+          return contentBlock1.appendChild(contentBlock1LogTime);
+
+        case 94:
+          _context5.next = 96;
+          return contentBlock1LogTime.classList.add('content-time');
+
+        case 96:
+          _context5.next = 98;
+          return contentBlock1LogTime.textContent = "You will be logged in ".concat(newTimeHours, ":").concat(newTimeSeconds);
+
+        case 98:
         case "end":
           return _context5.stop();
       }
@@ -425,17 +634,370 @@ function () {
 
         case 16:
           _context6.next = 18;
-          return contentBlock2.appendChild(contentBlock2CurrBtn);
+          return contentBlock2FormBlock1.appendChild(formsContent1);
 
         case 18:
           _context6.next = 20;
-          return contentBlock2CurrBtn.classList.add('content-btn');
+          return contentBlock2FormBlock2.appendChild(formsContent2);
 
         case 20:
           _context6.next = 22;
-          return contentBlock2CurrBtn.textContent = 'Currency';
+          return formContentCollection.forEach(function (items) {
+            items.classList.add('form-container');
+          });
 
         case 22:
+          _context6.next = 24;
+          return formsContent1.appendChild(formBlockTitle1);
+
+        case 24:
+          _context6.next = 26;
+          return formsContent2.appendChild(formBlockTitle2);
+
+        case 26:
+          _context6.next = 28;
+          return titleCollection.forEach(function (items) {
+            items.classList.add('form-container__title');
+          });
+
+        case 28:
+          _context6.next = 30;
+          return formBlockTitle1.textContent = "Transfer Money";
+
+        case 30:
+          _context6.next = 32;
+          return formBlockTitle2.textContent = "Close Accaunt";
+
+        case 32:
+          _context6.next = 34;
+          return formsContent1.appendChild(flexBox1);
+
+        case 34:
+          _context6.next = 36;
+          return formsContent1.appendChild(flexBox2);
+
+        case 36:
+          _context6.next = 38;
+          return flexBoxVault1.forEach(function (items) {
+            items.classList.add('form-container__block');
+          });
+
+        case 38:
+          _context6.next = 40;
+          return flexBox1.appendChild(formBox1);
+
+        case 40:
+          _context6.next = 42;
+          return flexBox1.appendChild(formBox2);
+
+        case 42:
+          _context6.next = 44;
+          return flexBox1.appendChild(transferBtn);
+
+        case 44:
+          _context6.next = 46;
+          return formBoxVault1.forEach(function (items) {
+            items.classList.add('form-construct');
+          });
+
+        case 46:
+          _context6.next = 48;
+          return formBox1.appendChild(formTransfer);
+
+        case 48:
+          _context6.next = 50;
+          return formBox1.appendChild(transferLabel);
+
+        case 50:
+          _context6.next = 52;
+          return formTransfer.classList.add('form-object');
+
+        case 52:
+          _context6.next = 54;
+          return formTransfer.setAttribute("type", "text");
+
+        case 54:
+          _context6.next = 56;
+          return formTransfer.setAttribute("id", "fTransfer");
+
+        case 56:
+          _context6.next = 58;
+          return formTransfer.setAttribute("name", "Transfer");
+
+        case 58:
+          _context6.next = 60;
+          return transferLabel.classList.add('form-label');
+
+        case 60:
+          _context6.next = 62;
+          return transferLabel.setAttribute("for", "fTransfer");
+
+        case 62:
+          _context6.next = 64;
+          return transferLabel.textContent = "Transfer to";
+
+        case 64:
+          _context6.next = 66;
+          return transferBtn.classList.add("form-sendler");
+
+        case 66:
+          _context6.next = 68;
+          return transferBtn.appendChild(butArr);
+
+        case 68:
+          _context6.next = 70;
+          return butArr.classList.add('sendler-arr');
+
+        case 70:
+          _context6.next = 72;
+          return butArr.innerHTML = "&rarr;";
+
+        case 72:
+          _context6.next = 74;
+          return flexBox2.appendChild(formBox3);
+
+        case 74:
+          _context6.next = 76;
+          return flexBox2.appendChild(requestBtn);
+
+        case 76:
+          _context6.next = 78;
+          return formBoxVault2.forEach(function (items) {
+            items.classList.add('form-construct');
+          });
+
+        case 78:
+          _context6.next = 80;
+          return formBox3.appendChild(formRequest);
+
+        case 80:
+          _context6.next = 82;
+          return formBox3.appendChild(requestLabel);
+
+        case 82:
+          _context6.next = 84;
+          return formRequest.classList.add('form-object');
+
+        case 84:
+          _context6.next = 86;
+          return formRequest.setAttribute("type", "number");
+
+        case 86:
+          _context6.next = 88;
+          return formRequest.setAttribute("id", "fRequest");
+
+        case 88:
+          _context6.next = 90;
+          return formRequest.setAttribute("name", "Request");
+
+        case 90:
+          _context6.next = 92;
+          return requestLabel.classList.add('form-label');
+
+        case 92:
+          _context6.next = 94;
+          return requestLabel.setAttribute("for", "fRequest");
+
+        case 94:
+          _context6.next = 96;
+          return requestLabel.textContent = "Request Loan";
+
+        case 96:
+          _context6.next = 98;
+          return requestBtn.classList.add("form-sendler");
+
+        case 98:
+          _context6.next = 100;
+          return requestBtn.appendChild(butArr2);
+
+        case 100:
+          _context6.next = 102;
+          return butArr2.classList.add('sendler-arr');
+
+        case 102:
+          _context6.next = 104;
+          return butArr2.innerHTML = "&rarr;";
+
+        case 104:
+          _context6.next = 106;
+          return formBox2.appendChild(formAmount);
+
+        case 106:
+          _context6.next = 108;
+          return formBox2.appendChild(amountLabel);
+
+        case 108:
+          _context6.next = 110;
+          return formAmount.classList.add('form-object');
+
+        case 110:
+          _context6.next = 112;
+          return formAmount.setAttribute("type", "number");
+
+        case 112:
+          _context6.next = 114;
+          return formAmount.setAttribute("id", "fAmount");
+
+        case 114:
+          _context6.next = 116;
+          return formAmount.setAttribute("name", "Amount");
+
+        case 116:
+          _context6.next = 118;
+          return amountLabel.classList.add('form-label');
+
+        case 118:
+          _context6.next = 120;
+          return amountLabel.setAttribute("for", "fAmount");
+
+        case 120:
+          _context6.next = 122;
+          return amountLabel.textContent = "Amount";
+
+        case 122:
+          _context6.next = 124;
+          return formsContent2.appendChild(flexBox3);
+
+        case 124:
+          _context6.next = 126;
+          return flexBox3.appendChild(formBox4);
+
+        case 126:
+          _context6.next = 128;
+          return flexBox3.appendChild(formBox5);
+
+        case 128:
+          _context6.next = 130;
+          return flexBox3.appendChild(closeBtn);
+
+        case 130:
+          _context6.next = 132;
+          return flexBox3.style.marginBottom = '3rem';
+
+        case 132:
+          _context6.next = 134;
+          return flexBoxVault2.forEach(function (items) {
+            items.classList.add('form-container__block');
+          });
+
+        case 134:
+          _context6.next = 136;
+          return formBox4.appendChild(formConfirmUser);
+
+        case 136:
+          _context6.next = 138;
+          return formBox4.appendChild(userLabel);
+
+        case 138:
+          _context6.next = 140;
+          return formConfirmUser.classList.add('form-object');
+
+        case 140:
+          _context6.next = 142;
+          return formConfirmUser.setAttribute("type", "text");
+
+        case 142:
+          _context6.next = 144;
+          return formConfirmUser.setAttribute("id", "fConfUser");
+
+        case 144:
+          _context6.next = 146;
+          return formConfirmUser.setAttribute("name", "Confirm");
+
+        case 146:
+          _context6.next = 148;
+          return userLabel.classList.add('form-label');
+
+        case 148:
+          _context6.next = 150;
+          return userLabel.setAttribute("for", "fConfUser");
+
+        case 150:
+          _context6.next = 152;
+          return userLabel.textContent = "Confirm User";
+
+        case 152:
+          _context6.next = 154;
+          return formBox5.appendChild(formConfirmPIN);
+
+        case 154:
+          _context6.next = 156;
+          return formBox5.appendChild(pinLabel);
+
+        case 156:
+          _context6.next = 158;
+          return formConfirmPIN.classList.add('form-object');
+
+        case 158:
+          _context6.next = 160;
+          return formConfirmPIN.setAttribute("type", "password");
+
+        case 160:
+          _context6.next = 162;
+          return formConfirmPIN.setAttribute("id", "fConfPIN");
+
+        case 162:
+          _context6.next = 164;
+          return formConfirmPIN.setAttribute("name", "ConfirmPIN");
+
+        case 164:
+          _context6.next = 166;
+          return pinLabel.classList.add('form-label');
+
+        case 166:
+          _context6.next = 168;
+          return pinLabel.setAttribute("for", "fConfPIN");
+
+        case 168:
+          _context6.next = 170;
+          return pinLabel.textContent = "Confirm PIN";
+
+        case 170:
+          _context6.next = 172;
+          return closeBtn.classList.add("form-sendler");
+
+        case 172:
+          _context6.next = 174;
+          return closeBtn.appendChild(butArr3);
+
+        case 174:
+          _context6.next = 176;
+          return butArr3.classList.add('sendler-arr');
+
+        case 176:
+          _context6.next = 178;
+          return butArr3.innerHTML = "&rarr;";
+
+        case 178:
+          _context6.next = 180;
+          return closeBtn.addEventListener('click', function (closeEvent) {
+            closeEvent.preventDefault();
+            closeEvent.stopPropagation();
+            var closeUserForm = formConfirmUser.value;
+            var closeUserPIN = formConfirmPIN.value;
+
+            if (closeUserForm == user1Info.UserName && closeUserPIN == +user1Info.UserPIN) {
+              newHeader.style.display = "none";
+              var headDisplayOn = header.style.display = "block";
+              return headDisplayOn;
+            } else {
+              alert('Something wrong!!!');
+            }
+          });
+
+        case 180:
+          _context6.next = 182;
+          return contentBlock2.appendChild(contentBlock2CurrBtn);
+
+        case 182:
+          _context6.next = 184;
+          return contentBlock2CurrBtn.classList.add('content-btn');
+
+        case 184:
+          _context6.next = 186;
+          return contentBlock2CurrBtn.textContent = 'Currency';
+
+        case 186:
         case "end":
           return _context6.stop();
       }
@@ -483,6 +1045,18 @@ exports.asyncVault = asyncVault;
 
 var _newHeaderModule = require("./newHeaderModule");
 
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 var icon5 = document.querySelector('.nav-icon-5');
 var burgerMenuShadow = document.querySelector('.nav-icon--shadow');
 var mainColumn = document.querySelector('.header-right-column');
@@ -493,9 +1067,23 @@ var windowWarning = document.querySelector('.main-warning--window');
 var columnIcon2 = document.querySelector('.column-icon--shadow');
 var warningClose = document.querySelector('.warn-close');
 var formsBtn = document.querySelector('.forms-btn');
-var body = document.querySelector('.body');
+var formUser = document.querySelector('.form--user');
+var formPIN = document.querySelector('.form--pin');
 var columnWandH = 100;
 var warnOpacity = 1;
+
+var dataUser =
+/*#__PURE__*/
+_createClass( // #user;
+// #pin;
+function dataUser(user, pin) {
+  _classCallCheck(this, dataUser);
+
+  this._user = user;
+  this._pin = pin;
+});
+
+var userExample = new dataUser("User", '0000');
 icon5.addEventListener('click', function (event) {
   icon5.classList.toggle("open");
 
@@ -594,10 +1182,16 @@ warningClose.addEventListener('click', function (event3) {
 formsBtn.addEventListener('click', function (event4) {
   event4.preventDefault();
   event4.stopPropagation();
+  var formUserData = formUser.value;
+  var formPINData = formPIN.value;
 
-  _newHeaderModule.asyncVault.forEach(function (items) {
-    return items();
-  }); // header.style.display = "none";
+  if (formUserData == userExample._user && formPINData == +userExample._pin) {
+    _newHeaderModule.asyncVault.forEach(function (items) {
+      return items();
+    });
+  } else {
+    alert('Something wrong!');
+  } // header.style.display = "none";
   // body.after(newHeader);
   // newHeader.classList.add('new-header');
   // newHeader.appendChild(newHeaderContainer);
@@ -638,7 +1232,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49914" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63551" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

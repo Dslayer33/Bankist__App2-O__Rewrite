@@ -485,6 +485,18 @@
                        font-family: $main-font;
                        font-size: 4rem;
                        text-align: center;
+                       transition: all .2s;
+
+
+                       &:focus {
+                           outline: none;
+                           border-bottom: 3px solid $color-main1;
+                       }
+
+                       &:focus:invalid {
+                           //outline: 3px solid red;
+                             border-bottom: 3px solid red;
+                       }
 
                        &::-webkit-input-placeholder {
                           color: $color-main2;
@@ -522,6 +534,13 @@
                        background-color: $color-main1;
                        border: none;
                        border-radius: 1rem;
+                       transition: all .2s;
+
+                    
+                       &:hover {
+                            cursor: pointer;
+                            box-shadow: 0 5px 3px 3px $color-main3;
+                       }
 
                        .forms-btn-text {
                           font-family: $main-font;
