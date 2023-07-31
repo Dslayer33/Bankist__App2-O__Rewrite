@@ -13,5 +13,8 @@
   "devDependencies": {
     "node-sass": "^4.13.1",
     "parcel": "^1.12.3"
+  },
+  "dependencies": {
+    "@webcomponents/custom-elements": "^1.6.0"
   }
 }

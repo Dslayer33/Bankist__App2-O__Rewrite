@@ -2,7 +2,12 @@
 // import {header,newHeader,newHeaderContainer,newHeaderContent,
 //   contentBlock1,contentBlock2,promisesVault,loadCont} from "./newHeaderModule";
 
-   import {asyncVault}  from "./newHeaderModule";
+   import {asyncVault,header}  from "./newHeaderModule";
+   import {warnModalBlock} from "./modalWindowModule";
+   import {renderRegVault} from "./registrationLayoutModule";
+   
+   
+   
 
 const icon5 = document.querySelector('.nav-icon-5'); 
 let burgerMenuShadow = document.querySelector('.nav-icon--shadow');
@@ -16,6 +21,7 @@ let warningClose = document.querySelector('.warn-close');
 let formsBtn = document.querySelector('.forms-btn');
 let formUser = document.querySelector('.form--user');
 let formPIN = document.querySelector('.form--pin');
+let createAccBtn = document.querySelector('.box-create-acc');
 
 
 let columnWandH = 100;
@@ -183,8 +189,13 @@ let userExample = new dataUser("User",'0000');
           return items();
         });
      } else {
-        alert('Something wrong!');
+        //alert('Something wrong!');
+        header.appendChild(warnModalBlock);
+        warnModalBlock.style.opacity = '1';
+        warnModalBlock.style.visibility = 'visible';
      }
+
+     
 
      
      
@@ -208,4 +219,12 @@ let userExample = new dataUser("User",'0000');
  
 
   
-  
+  createAccBtn.addEventListener('click',function(event5){
+     event5.preventDefault();
+     event5.stopPropagation();
+
+     header.style.display = 'none';
+     renderRegVault.forEach(function(item){
+         return item();
+     });
+  });

@@ -3,6 +3,8 @@
 @import "layout/header";
 @import "base/animations";
 @import "layout/newheader";
+@import "abstracts/modwindows";
+@import "layout/registrlayout";
 
 html {
     font-size: 62.5%;
@@ -20,7 +22,9 @@ html {
 
 
 
+
 * {
+    border: 0;
     padding: 0;
     margin: 0;
     box-sizing: inherit;

@@ -474,4 +474,4 @@ let asyncVault = [newHeaderLoad,newHeaderContainerLoad,
 
 
 
-export {asyncVault};
+export {asyncVault,header};

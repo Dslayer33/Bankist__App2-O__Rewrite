@@ -1,0 +1,180 @@
+.registr-layout {
+     display: none;
+     width: 100vw;
+     height: 100vh;
+     position: relative;
+     background-color: $color-main6;
+
+     .registr-main-block {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          width: 50rem;
+          height: 60rem;
+          background-color: $color-main1;
+          border: none;
+          border-radius: 2rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          box-shadow: 0 10px 20px  $color-main1;
+
+          .reg-main-text {
+               font-family: $main-font;
+               font-size: 2rem;
+               color: $color-main2;
+               text-transform: uppercase;
+               letter-spacing: 0.65rem;
+          }
+
+
+          .reg-forms-block {
+               width: 40rem;
+               height: 40rem;
+               display: flex;
+               padding: 1rem;
+               flex-direction: column;
+               justify-content: space-around;
+
+               .reg-form-item {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .reg-form-label {
+                         left: 0;
+                         padding: 1rem 0;
+                         text-transform: uppercase;
+                         font-family: $main-font;
+                         font-size: 2rem;
+                         color: $color-main2;
+                    }
+
+                    .reg-form-label.reg-form-label {
+                         @include breakpoint6h_ {
+                              font-size: 1.5rem;
+                              font-weight: 700;
+                         }
+                    }
+
+
+                    .reg-form-input {
+                         width: 100%;
+                         height: 4rem;
+                         border: none;
+                         background-color: transparent;
+                         text-align: center;
+                         margin-top: 1rem;
+                         border: 2px solid $color-main2;
+                         border-radius: 2rem;
+                         outline: none;
+                         font-size: 2rem;
+                         color: $color-main2;
+                         transition: all .3s;
+
+                         &:hover {
+                              box-shadow: 0 0.5rem 1rem $color-main2;
+                         }
+                    }
+
+               }
+          }
+
+          .reg-forms-block.reg-forms-block.reg-forms-block.reg-forms-block {
+               @include breakpoint5_ {
+                    width: 90%;
+               }
+          }
+
+          .reg-forms-block.reg-forms-block.reg-forms-block {
+               @include breakpoint6h_ {
+                    height: 30rem;
+               }
+          }
+
+
+          .reg-forms-block.reg-forms-block {
+               @include breakpoint5h_ {
+                    height: 35rem;
+                }
+          }
+
+
+          .reg-sub-btn {
+               width: 15rem;
+               height: 4rem;
+               background-color: $color-main2;
+               border: none;
+               border-radius: 2rem;
+
+               .reg-btn-text {
+                    font-family: $main-font;
+                    font-size: 2rem;
+                    color: $color-main1;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    transition: all .2s;
+               }
+
+               &:hover {
+                   cursor: pointer;
+               }
+
+               &:hover .reg-btn-text {
+                    letter-spacing: 0.25rem;
+               }
+          }
+
+          .reg-login-text {
+               font-family: $main-font;
+               font-size: 1.5rem;
+               color: $color-main2;
+               font-weight: 700;
+               text-transform: uppercase;
+               text-decoration: none;
+               transition: all .2s;
+
+               &:hover {
+                    text-decoration: underline;
+               }
+          }
+
+          // .reg-login-text.reg-login-text {
+          //      @include breakpoint10_ {
+          //           font-size: 1.2rem;
+          //           font-weight: 800;
+          //      }
+          // }
+     }
+
+     .registr-main-block.registr-main-block.registr-main-block.registr-main-block.registr-main-block {
+          @include breakpoint10_ {
+               text-align: center;
+          }
+     }
+
+
+
+     .registr-main-block.registr-main-block.registr-main-block.registr-main-block {
+          @include breakpoint5_ {
+               width: 92%;
+          }
+     }
+
+
+     .registr-main-block.registr-main-block.registr-main-block {
+          @include breakpoint7h_ {
+               height: 100%;
+          }
+     }
+
+     .registr-main-block.registr-main-block {
+          @include breakpoint4h_ {
+              height: 95%;
+          }
+     }
+     
+
+}

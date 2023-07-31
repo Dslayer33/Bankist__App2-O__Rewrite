@@ -26,19 +26,34 @@
     @media screen and (max-width:650px) { @content};
 }
 
+@mixin breakpoint4h_  {
+    @media screen and (max-height:650px) { @content};
+}
+
 
 @mixin breakpoint5_  {
     @media screen and (max-width:550px) { @content};
 }
 
+@mixin breakpoint5h_  {
+    @media screen and (max-height:550px) { @content};
+}
 
 @mixin breakpoint6_  {
     @media screen and (max-width:500px) { @content};
 }
 
+@mixin breakpoint6h_  {
+    @media screen and (max-height:500px) { @content};
+}
+
 
 @mixin breakpoint7_  {
     @media screen and (max-width:450px) { @content};
+}
+
+@mixin breakpoint7h_  {
+    @media screen and (max-height:450px) { @content};
 }
 
 

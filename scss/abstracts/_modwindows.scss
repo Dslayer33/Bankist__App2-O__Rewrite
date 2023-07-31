@@ -1,0 +1,123 @@
+
+.warn-modal-block {
+    opacity: 0;
+    visibility: hidden;
+    width: 35rem;
+    height: 15rem;
+    position: fixed;
+    right: 5rem;
+    top: 2rem;
+    transform: translate(-5rem,2rem);
+    border: 4px solid $color-main1;
+    border-radius: 2rem;
+    background-color: $color-main2;
+    animation-name: OpenWindow;
+    animation-duration: .7s;
+
+
+    .warn-modal-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .warn-modal-item {
+            width: 30rem;
+            height: 10rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+
+            .warn-modal-icon {
+                font-size: 2rem;
+                font-weight: 500;
+                cursor: pointer;
+                align-self: flex-end;
+                margin-right: 1rem;
+                color: $color-main1;
+            }
+
+            .warn-main-block {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+
+                .warn-alert-icon {
+                    align-self: center;
+                }
+
+                .warn-text-box {
+                    width: 25rem;
+                    height: 4rem;
+                }
+
+                .warn-text-box.warn-text-box {
+                    @include breakpoint8_ {
+                        margin-left: 2rem;
+                    }
+                }
+
+                .warn-main-text {
+                    font-family: $main-font;
+                    font-size: 2rem;
+                    color: $color-main1;
+                }
+
+                .warn-main-text.warn-main-text {
+                    @include breakpoint8_ {
+                        font-size: 1.5rem;
+                    }
+                }
+
+            }
+
+
+
+
+
+
+
+
+        }
+
+
+        .warn-modal-item.warn-modal-item {
+            @include breakpoint8_ {
+                width: 20rem;
+            }
+        }
+    }
+
+}
+
+.warn-modal-block.warn-modal-block.warn-modal-block {
+    @include breakpoint8_ {
+        //transform: scale(0.9);
+        width: 25rem;
+    }
+}
+
+.warn-modal-block.warn-modal-block {
+    @include breakpoint4_ {
+        position: fixed;
+        left: 50%;
+        top: 2rem;
+        transform: translate(-50%,2rem);
+    }
+}
+
+@keyframes OpenWindow {
+    0% {
+       opacity: 0;
+       visibility: hidden;
+    }
+
+    100% {
+       opacity: 1;
+       visibility: visible;
+    }
+}
